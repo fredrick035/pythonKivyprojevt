@@ -1,0 +1,45 @@
+MDFloatLayout:
+    MDLabel:
+        text:"signup "
+        pos_hint:{"center_y":.95}
+        font_style:"H4"
+        halign:"center"
+        theme_text_color:"Custom"
+        text_color:0,0,1,1
+
+    MDTextField:
+        id:username
+        hint_text:"username"
+        pos_hint:{"center_x":.5,"center_y":.85}
+        current_hint_text_color:.0,0,0,1
+        size_hint_x:.8
+    MDTextField:
+        id:email
+        hint_text:"Enter Your Email"
+        pos_hint:{"center_x":.5,"center_y":.75}
+        current_hint_text_color:.0,0,0,1
+        size_hint_x:.8
+
+    MDTextField:
+        id:phone
+        hint_text:"phon number"
+        pos_hint:{"center_x":.5,"center_y":.65}
+        current_hint_text_color:.0,0,0,1
+        size_hint_x:.8
+    MDTextField:
+        id:password
+        hint_text:"Password"
+        pos_hint:{"center_x":.5,"center_y":.55}
+        current_hint_text_color:.0,0,0,1
+        size_hint_x:.8
+        md_bg_text_color:0,0,0,0
+        password:True
+    MDRaisedButton:
+        text:"Sign Up"
+        pos_hint:{"center_x":.5,"center_y":.20}
+        size_hint_x:.5
+        theme_text_color:"Custom"
+        text_color:0,0,0,1
+        on_release:app.verify(email.text,password.text)
+
+
